@@ -48,4 +48,5 @@ body {
   font-family: var(--font-inter);
   background-color: var(--preto-background);
   color: var(--branco-texto);
+  padding: 0 2rem;
 }
