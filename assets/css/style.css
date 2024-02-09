@@ -1,0 +1,51 @@
+/* fontes de textos */
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Inter:wght@400;500;600;700&display=swap');
+
+/* variáveis de estilo */
+:root {
+  /* fonts */
+  --font-calistoga: 'Calistoga', serif;
+  --font-inter: 'Inter', serif;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+  
+  /* cores */
+  --preto-background: #141414;
+  --preto-cinza: #2B2B2B;
+  --preto-cinza-medium: #1F1F1F;
+  --laranja-cor-botoes: #FE6A0F;
+  --branco-texto: #FFFFFF;
+
+}
+
+/* estilos padrão */
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 1.8rem;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* container */
+.container{
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* padrão geral do html */
+html {
+  font-size: 62.5%;
+  /* equivale a tamanho 10px*/
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-inter);
+  background-color: var(--preto-background);
+  color: var(--branco-texto);
+}
