@@ -75,37 +75,72 @@ header .container {
   padding: 4.5rem 0;
   align-items: center;
 }
+
 header nav {
   flex: 1;
   display: flex;
   align-items: center;
 }
+
 header nav .leftside {
   flex: 1;
   gap: 4rem;
   display: flex;
 }
-header nav .leftside li{
+
+header nav .leftside li {
   margin: 0 2rem;
 }
+
 header nav .leftside li a {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   text-decoration: none;
   color: var(--branco-texto);
 }
-header nav .leftside li a:hover{
+
+header nav .leftside li a:hover {
   color: var(--cinza-fraco);
   transition: var(--transition-hover);
 }
+
 header nav .rightside a.button {
   text-decoration: none;
   border-radius: 0.5rem;
   padding: 1.5rem 2.5rem;
   color: var(--branco-texto);
   border: 0.1rem solid var(--branco-texto);
+  font-size: 1.4rem;
+  display: flex;
 }
-header nav .rightside a.button:hover{
+
+header nav .rightside a.button:hover {
   border: var(--border-fit-orange);
   transition: var(--transition-hover);
   background: var(--laranja-cor-botoes);
+}
+
+header .hamburguerMenu {
+  display: none;
+  flex: 1;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-content: flex-end;
+}
+
+header .hamburguerMenu .square {
+  width: 3rem;
+  height: 0.4rem;
+  margin: 0.2rem 0;
+  background-color: var(--branco-texto);
+}
+
+@media (max-width: 820px) {
+  header nav {
+    display: none;
+  }
+
+  header .hamburguerMenu {
+    display: flex;
+  }
 }
