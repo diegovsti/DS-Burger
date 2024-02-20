@@ -4,61 +4,108 @@
 /* variáveis de estilo */
 :root {
   /* fonts */
-  --font-calistoga: 'Calistoga', serif;
-  --font-inter: 'Inter', serif;
-  --font-weight-regular: 400;
-  --font-weight-medium: 500;
-  --font-weight-semi-bold: 600;
   --font-weight-bold: 700;
+  --font-weight-medium: 500;
+  --font-weight-regular: 400;
+  --font-weight-semi-bold: 600;
+  --font-inter: 'Inter', serif;
+  --font-calistoga: 'Calistoga', serif;
 
   /* cores */
-  --preto-background: #141414;
+  --cinza-fraco: #999999;
+  --branco-texto: #FFFFFF;
   --preto-cinza: #2B2B2B;
+  --preto-background: #141414;
   --preto-cinza-medium: #1F1F1F;
   --laranja-cor-botoes: #FE6A0F;
-  --branco-texto: #FFFFFF;
 
+  /* animações */
+  --transition-hover: all .3s ease-in;
+  --border-fit-orange: 0.1rem solid #FE6A0F;
 }
 
 /* estilos padrão */
 * {
   margin: 0;
   padding: 0;
+  list-style: none;
   font-size: 1.8rem;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 
 }
 
+/* padrão geral do html */
 /* container */
 .container {
   width: 100%;
-  max-width: 1200px;
   margin: auto;
+  max-width: 1200px;
 }
 
-/* padrão geral do html */
 html {
-  font-size: 62.5%;
   /* equivale a tamanho 10px*/
+  font-size: 62.5%;
   scroll-behavior: smooth;
 }
 
 body {
+  padding: 0 2rem;
+  color: var(--branco-texto);
   font-family: var(--font-inter);
   background-color: var(--preto-background);
-  color: var(--branco-texto);
-  padding: 0 2rem;
 }
 
 .logo a {
-  color: var(--branco-texto);
-  font-family: var(--font-calistoga);
   font-size: 3.8rem;
   text-decoration: none;
+  color: var(--branco-texto);
+  font-family: var(--font-calistoga);
 }
 
 .logo a span {
-  color: var(--laranja-cor-botoes);
   line-height: 3.8rem;
+  color: var(--laranja-cor-botoes);
+}
+
+/* header */
+header .container {
+  gap: 5rem;
+  display: flex;
+  padding: 4.5rem 0;
+  align-items: center;
+}
+header nav {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+header nav .leftside {
+  flex: 1;
+  gap: 4rem;
+  display: flex;
+}
+header nav .leftside li{
+  margin: 0 2rem;
+}
+header nav .leftside li a {
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: var(--branco-texto);
+}
+header nav .leftside li a:hover{
+  color: var(--cinza-fraco);
+  transition: var(--transition-hover);
+}
+header nav .rightside a.button {
+  text-decoration: none;
+  border-radius: 0.5rem;
+  padding: 1.5rem 2.5rem;
+  color: var(--branco-texto);
+  border: 0.1rem solid var(--branco-texto);
+}
+header nav .rightside a.button:hover{
+  border: var(--border-fit-orange);
+  transition: var(--transition-hover);
+  background: var(--laranja-cor-botoes);
 }
