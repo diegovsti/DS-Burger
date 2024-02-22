@@ -21,7 +21,11 @@
 
   /* animações */
   --transition-hover: all .3s ease-in;
+
+  /* bordas */
+  --border-radius-5px: 0.5rem;
   --border-fit-orange: 0.1rem solid #FE6A0F;
+  --border-fit-white: 0.1rem solid #ffffff;
 }
 
 /* estilos padrão */
@@ -135,8 +139,65 @@ header .hamburguerMenu .square {
   background-color: var(--branco-texto);
 }
 
+
+/* hero section */
+.hero .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .heroleft,
+.hero .heroright {
+  flex: 1;
+}
+
+.hero .heroright {
+  text-align: center;
+}
+
+.hero .heroright img {
+  width: auto;
+  height: 50.8rem;
+}
+
+.hero .heroleft h1 {
+  margin-bottom: 2rem 0;
+  font-size: 3.5rem;
+  line-height: 5.2rem;
+  font-family: var(--font-calistoga);
+}
+
+.hero .heroleft p {
+  margin: 2rem 0;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  font-family: var(--font-inter);
+}
+
+.hero .heroleft .herobutton {
+  width: 28rem;
+  display: block;
+  text-align: center;
+  padding: 2rem 2.5rem;
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: var(--branco-texto);
+  border: var(--border-fit-orange);
+  transition: var(--transition-hover);
+  border-radius: var(--border-radius-5px);
+  background-color: var(--laranja-cor-botoes);
+}
+
+.hero .heroleft .herobutton:hover {
+  background-color: transparent;
+  transition: var(--transition-hover);
+}
+
+
 @media (max-width: 820px) {
   header nav {
+    flex: 1;
     display: none;
   }
 
