@@ -145,6 +145,7 @@ header .hamburguerMenu .square {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .hero .heroleft,
@@ -203,5 +204,22 @@ header .hamburguerMenu .square {
 
   header .hamburguerMenu {
     display: flex;
+  }
+
+  .hero .heroleft{
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+  .hero .heroleft h1{
+    font-size: 3rem;
+  }
+  .hero .heroleft p{
+    font-size: 1.4rem;
+  }
+  .hero .heroleft .herobutton{
+    margin: 0 auto;
+  }
+  .hero .heroright img{
+    height: 30rem;
   }
 }
