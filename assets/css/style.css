@@ -71,7 +71,6 @@ body {
   color: var(--branco-texto);
   font-family: var(--font-calistoga);
 }
-
 .logo a span {
   line-height: 3.8rem;
   color: var(--laranja-cor-botoes);
@@ -81,41 +80,34 @@ body {
 header {
   padding: 0 4rem;
 }
-
 header .container {
   gap: 5rem;
   display: flex;
   padding: 4.5rem 0;
   align-items: center;
 }
-
 header nav {
   flex: 1;
   display: flex;
   align-items: center;
 }
-
 header nav .leftside {
   flex: 1;
   gap: 4rem;
   display: flex;
 }
-
 header nav .leftside li {
   margin: 0 2rem;
 }
-
 header nav .leftside li a {
   font-size: 1.4rem;
   text-decoration: none;
   color: var(--branco-texto);
 }
-
 header nav .leftside li a:hover {
   color: var(--cinza-fraco);
   transition: var(--transition-hover);
 }
-
 header nav .rightside a.button {
   text-decoration: none;
   border-radius: 0.5rem;
@@ -125,13 +117,11 @@ header nav .rightside a.button {
   font-size: 1.4rem;
   display: flex;
 }
-
 header nav .rightside a.button:hover {
   border: var(--border-fit-orange);
   transition: var(--transition-hover);
   background: var(--laranja-cor-botoes);
 }
-
 header .hamburguerMenu {
   display: none;
   flex: 1;
@@ -140,7 +130,6 @@ header .hamburguerMenu {
   justify-content: flex-end;
   align-content: flex-end;
 }
-
 header .hamburguerMenu .square {
   width: 3rem;
   height: 0.4rem;
@@ -153,32 +142,26 @@ header .hamburguerMenu .square {
 .hero {
   padding: 0 4rem;
 }
-
 .hero .container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
 }
-
 .hero .heroleft,
 .hero .heroright {
   flex: 1;
 }
-
 .hero .heroleft {
   margin-bottom: 15rem;
 }
-
 .hero .heroright {
   text-align: center;
 }
-
 .hero .heroright img {
   width: auto;
   height: 50.8rem;
 }
-
 .hero .heroleft h1,
 .hero .heroleft span {
   font-size: 5.3rem;
@@ -186,20 +169,16 @@ header .hamburguerMenu .square {
   margin-bottom: 2rem 0;
   font-family: var(--font-calistoga);
 }
-
 .hero .heroleft span{
   color: var(--laranja-cor-botoes);
 }
-
 .hero .heroleft p {
   margin: 4rem 0;
   font-size: 1.8rem;
   line-height: 2.8rem;
   font-family: var(--font-inter);
 }
-
 .hero .heroleft .herobutton {
-  /* width: 28rem; */
   font-size: 1.6rem;
   text-align: center;
   padding: 2rem 8rem;
@@ -211,7 +190,6 @@ header .hamburguerMenu .square {
   border-radius: var(--border-radius-5px);
   background-color: var(--laranja-cor-botoes);
 }
-
 .hero .heroleft .herobutton:hover {
   opacity: 0.8;
   background-color: transparent;
@@ -268,7 +246,6 @@ header .hamburguerMenu .square {
     flex: 1;
     display: none;
   }
-
   header .hamburguerMenu {
     display: flex;
   }
@@ -276,27 +253,23 @@ header .hamburguerMenu .square {
   .hero {
     padding: 0 1rem;
   }
-
   .hero .container {
     flex-direction: column;
   }
-
   .hero .heroleft {
     padding: 0;
     margin-top: 5rem;
     text-align: center;
     margin-bottom: 4rem;
   }
-
-  .hero .heroleft h1 {
-    font-size: 3.3rem;
+  .hero .heroleft h1,
+  .hero .heroleft span {
+    font-size: 3.9rem;
     line-height: 5.8rem;
   }
-
   .hero .heroleft .herobutton {
     margin: 0 auto;
   }
-
   .hero .heroright img {
     height: 35rem;
     padding-bottom: 5rem;
@@ -306,7 +279,6 @@ header .hamburguerMenu .square {
     text-align: center;
     padding-bottom: 3rem;
   }
-
   .search .searchsides {
     flex-direction: column;
     padding: 3rem;
