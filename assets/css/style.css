@@ -25,11 +25,12 @@
 
   /* bordas */
   --border-radius-5px: 0.5rem;
+  --border-radius-8px: 0.8rem;
   --border-fit-orange: 0.1rem solid #FE6A0F;
   --border-fit-white: 0.1rem solid #ffffff;
 }
 
-::selection{
+::selection {
   color: var(--laranja-cor-botoes);
 }
 
@@ -71,6 +72,7 @@ body {
   color: var(--branco-texto);
   font-family: var(--font-calistoga);
 }
+
 .logo a span {
   line-height: 3.8rem;
   color: var(--laranja-cor-botoes);
@@ -80,34 +82,41 @@ body {
 header {
   padding: 0 4rem;
 }
+
 header .container {
   gap: 5rem;
   display: flex;
   padding: 4.5rem 0;
   align-items: center;
 }
+
 header nav {
   flex: 1;
   display: flex;
   align-items: center;
 }
+
 header nav .leftside {
   flex: 1;
   gap: 4rem;
   display: flex;
 }
+
 header nav .leftside li {
   margin: 0 2rem;
 }
+
 header nav .leftside li a {
   font-size: 1.4rem;
   text-decoration: none;
   color: var(--branco-texto);
 }
+
 header nav .leftside li a:hover {
   color: var(--cinza-fraco);
   transition: var(--transition-hover);
 }
+
 header nav .rightside a.button {
   text-decoration: none;
   border-radius: 0.5rem;
@@ -117,11 +126,13 @@ header nav .rightside a.button {
   font-size: 1.4rem;
   display: flex;
 }
+
 header nav .rightside a.button:hover {
   border: var(--border-fit-orange);
   transition: var(--transition-hover);
   background: var(--laranja-cor-botoes);
 }
+
 header .hamburguerMenu {
   display: none;
   flex: 1;
@@ -130,6 +141,7 @@ header .hamburguerMenu {
   justify-content: flex-end;
   align-content: flex-end;
 }
+
 header .hamburguerMenu .square {
   width: 3rem;
   height: 0.4rem;
@@ -142,26 +154,32 @@ header .hamburguerMenu .square {
 .hero {
   padding: 0 4rem;
 }
+
 .hero .container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
 }
+
 .hero .heroleft,
 .hero .heroright {
   flex: 1;
 }
+
 .hero .heroleft {
   margin-bottom: 15rem;
 }
+
 .hero .heroright {
   text-align: center;
 }
+
 .hero .heroright img {
   width: auto;
   height: 50.8rem;
 }
+
 .hero .heroleft h1,
 .hero .heroleft span {
   font-size: 5.3rem;
@@ -169,15 +187,18 @@ header .hamburguerMenu .square {
   margin-bottom: 2rem 0;
   font-family: var(--font-calistoga);
 }
-.hero .heroleft span{
+
+.hero .heroleft span {
   color: var(--laranja-cor-botoes);
 }
+
 .hero .heroleft p {
   margin: 4rem 0;
   font-size: 1.8rem;
   line-height: 2.8rem;
   font-family: var(--font-inter);
 }
+
 .hero .heroleft .herobutton {
   font-size: 1.6rem;
   text-align: center;
@@ -190,6 +211,7 @@ header .hamburguerMenu .square {
   border-radius: var(--border-radius-5px);
   background-color: var(--laranja-cor-botoes);
 }
+
 .hero .heroleft .herobutton:hover {
   opacity: 0.8;
   background-color: transparent;
@@ -198,7 +220,7 @@ header .hamburguerMenu .square {
 
 /* search area */
 .search {
-  padding: 8rem 4rem;
+  padding: 8rem 0rem;
   margin-top: -12rem;
   background-color: var(--preto-cinza-medium);
 }
@@ -236,16 +258,76 @@ header .hamburguerMenu .square {
 .search .searchsides .searchright select {
   border-right: 2rem solid transparent;
 }
-.search .searchsides .searchleft input::placeholder{
+.search .searchsides .searchleft input::placeholder {
   color: var(--cinza-placeholder);
 }
 
+/* products area */
 
+main .productgrid {
+  gap: 2rem;
+  display: grid;
+  margin: 4rem 0;
+  grid-template-columns: repeat(3, 1fr);
+}
+main .productgrid .productitem {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  border-radius: var(--border-radius-8px);
+}
+main .productgrid .productitem:hover{
+  opacity: 0.8;
+}
+main .productgrid .productitem .productwarning {
+  top: 3rem;
+  left: 3rem;
+  font-size: 1.4rem;
+  position: absolute;
+  padding: 1rem 1.6rem;
+  color: var(--branco-texto);
+  border-radius: var(--border-radius-5px);
+  background-color: var(--laranja-cor-botoes);
+}
+main .productgrid .productitem .productphoto {
+  text-align: center;
+  padding-top: 4.5rem;
+  background-color: var(--preto-cinza);
+}
+main .productgrid .productitem .productphoto img{
+  max-width: 100%;
+}
+main .productgrid .productitem .productinfo {
+  margin-top: -5rem;
+  padding: 6rem 3rem 3rem 3rem;
+  background-color: var(--preto-cinza-medium);
+}
+main .productgrid .productitem .productinfo .productcategory {
+  margin: 1rem 0;
+  font-size: 1.8rem;
+  color: var(--branco-texto);
+}
+main .productgrid .productitem .productinfo .productname {
+  margin: 1rem 0;
+  font-size: 3.2rem;
+  color: var(--branco-texto);
+  font-family: var(--font-calistoga);
+}
+main .productgrid .productitem .productinfo .productprice {
+  font-size: 3.2rem;
+  font-weight: bold;
+  font-family: var(--font-inter);
+  color: var(--laranja-cor-botoes);
+}
+
+/* media querys, layout responsivo tablet */
 @media (max-width: 820px) {
   header nav {
     flex: 1;
     display: none;
   }
+
   header .hamburguerMenu {
     display: flex;
   }
@@ -253,23 +335,28 @@ header .hamburguerMenu .square {
   .hero {
     padding: 0 1rem;
   }
+
   .hero .container {
     flex-direction: column;
   }
+
   .hero .heroleft {
     padding: 0;
     margin-top: 5rem;
     text-align: center;
     margin-bottom: 4rem;
   }
+
   .hero .heroleft h1,
   .hero .heroleft span {
     font-size: 3.9rem;
     line-height: 5.8rem;
   }
+
   .hero .heroleft .herobutton {
     margin: 0 auto;
   }
+
   .hero .heroright img {
     height: 35rem;
     padding-bottom: 5rem;
@@ -279,9 +366,20 @@ header .hamburguerMenu .square {
     text-align: center;
     padding-bottom: 3rem;
   }
+
   .search .searchsides {
     flex-direction: column;
-    padding: 3rem;
+    padding: 3rem 1rem;
     gap: 3rem;
+  }
+    main .productgrid {
+      grid-template-columns:  repeat(2, 1fr);
+      padding: 0 3rem;
+    }
+}
+@media (max-width: 500px){
+  main .productgrid{
+    grid-template-columns: 1fr;
+    padding: 3rem 2rem;
   }
 }
