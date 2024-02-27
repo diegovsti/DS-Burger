@@ -14,6 +14,7 @@
   /* cores */
   --cinza-fraco: #999999;
   --cinza-placeholder: #979797;
+  --cinza-footer: #5f5f5f;
   --branco-texto: #FFFFFF;
   --preto-cinza: #2B2B2B;
   --preto-background: #141414;
@@ -81,6 +82,12 @@ body {
 /* header */
 header {
   padding: 0 4rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: var(--preto-background);
 }
 
 header .container {
@@ -152,7 +159,8 @@ header .hamburguerMenu .square {
 
 /* hero section */
 .hero {
-  padding: 0 4rem;
+  padding: 5rem 4rem;
+  margin-top: 14rem;
 }
 
 .hero .container {
@@ -168,7 +176,7 @@ header .hamburguerMenu .square {
 }
 
 .hero .heroleft {
-  margin-bottom: 15rem;
+  margin-bottom: 20rem;
 }
 
 .hero .heroright {
@@ -221,24 +229,32 @@ header .hamburguerMenu .square {
 /* search area */
 .search {
   padding: 8rem 0rem;
-  margin-top: -12rem;
+  margin-top: -18rem;
   background-color: var(--preto-cinza-medium);
 }
+
+.search .container {
+  margin-top: 8rem;
+}
+
 .search .searchtitle h2 {
   font-weight: 500;
   font-family: var(--font-inter);
   font-size: 3.2rem;
 }
+
 .search .searchsides {
   display: flex;
   flex-wrap: wrap;
   padding: 3rem 0;
   gap: 10rem;
 }
+
 .search .searchsides .searchleft,
 .search .searchsides .searchright {
   flex: 1;
 }
+
 .search .searchsides .searchleft input,
 .search .searchsides .searchright select {
   border: 0;
@@ -249,20 +265,26 @@ header .hamburguerMenu .square {
   background-color: var(--preto-cinza);
   border-radius: var(--border-radius-5px);
 }
+
 .search .searchsides .searchleft input {
   background-image: url(../img/searchIcon.png);
   background-repeat: no-repeat;
   background-position: 2rem center;
   padding-left: 5rem;
 }
+
 .search .searchsides .searchright select {
   border-right: 2rem solid transparent;
 }
+
 .search .searchsides .searchleft input::placeholder {
   color: var(--cinza-placeholder);
 }
 
 /* products area */
+main {
+  padding-top: 13rem;
+}
 
 main .productgrid {
   gap: 2rem;
@@ -270,6 +292,7 @@ main .productgrid {
   margin: 4rem 0;
   grid-template-columns: repeat(3, 1fr);
 }
+
 main .productgrid .productitem {
   display: block;
   overflow: hidden;
@@ -277,9 +300,11 @@ main .productgrid .productitem {
   text-decoration: none;
   border-radius: var(--border-radius-8px);
 }
-main .productgrid .productitem:hover{
+
+main .productgrid .productitem:hover {
   opacity: 0.8;
 }
+
 main .productgrid .productitem .productwarning {
   top: 3rem;
   left: 3rem;
@@ -290,35 +315,69 @@ main .productgrid .productitem .productwarning {
   border-radius: var(--border-radius-5px);
   background-color: var(--laranja-cor-botoes);
 }
+
 main .productgrid .productitem .productphoto {
   text-align: center;
   padding-top: 4.5rem;
   background-color: var(--preto-cinza);
 }
-main .productgrid .productitem .productphoto img{
+
+main .productgrid .productitem .productphoto img {
   max-width: 100%;
 }
+
 main .productgrid .productitem .productinfo {
   margin-top: -5rem;
   padding: 6rem 3rem 3rem 3rem;
   background-color: var(--preto-cinza-medium);
 }
+
 main .productgrid .productitem .productinfo .productcategory {
   margin: 1rem 0;
   font-size: 1.8rem;
   color: var(--branco-texto);
 }
+
 main .productgrid .productitem .productinfo .productname {
   margin: 1rem 0;
   font-size: 3.2rem;
   color: var(--branco-texto);
   font-family: var(--font-calistoga);
 }
+
 main .productgrid .productitem .productinfo .productprice {
   font-size: 3.2rem;
   font-weight: bold;
   font-family: var(--font-inter);
   color: var(--laranja-cor-botoes);
+}
+
+
+
+/* footer */
+footer {
+  background-color: var(--preto-cinza-medium);
+  color: var(--cinza-footer);
+}
+
+footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8rem 2rem;
+}
+
+footer .container .footercopy a {
+  color: var(--cinza-footer);
+  transition: var(--transition-hover);
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+
+footer .container .footercopy a:hover {
+  color: var(--laranja-cor-botoes);
+  transition: var(--transition-hover);
 }
 
 /* media querys, layout responsivo tablet */
@@ -372,13 +431,20 @@ main .productgrid .productitem .productinfo .productprice {
     padding: 3rem 1rem;
     gap: 3rem;
   }
-    main .productgrid {
-      grid-template-columns:  repeat(2, 1fr);
-      padding: 0 3rem;
-    }
+
+  main .productgrid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 3rem;
+  }
+
+  footer .container {
+    flex-direction: column;
+    gap: 2rem;
+  }
 }
-@media (max-width: 500px){
-  main .productgrid{
+
+@media (max-width: 500px) {
+  main .productgrid {
     grid-template-columns: 1fr;
     padding: 3rem 2rem;
   }
